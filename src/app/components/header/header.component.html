@@ -1,0 +1,14 @@
+<div>
+  <nav class="bg-white p-4 flex flex-row justify-between">
+    <a href="/">
+      <img src="assets/images/github-logo-1.png" alt="logo" class="w-32" />
+    </a>
+    <div class="border border-gray-300 rounded-lg flex">
+      <input type="text" placeholder="Search or jump to..." class="p-2 text-black" name="githubUsername" id="githubUsername" [(ngModel)]="githubUsername"
+        autocomplete autofocus (keypress)="onKeyPressEvent($event)" />
+      <button (click)="onSearchClick()" class="flex items-center">
+        <span class="material-symbols-outlined text-black hover:text-blue-600">search</span>
+      </button>
+    </div>
+  </nav>
+</div>

@@ -1,0 +1,20 @@
+<div class="bg-gray-800 h-screen">
+  <nav class="bg-white min-w-full p-4 flex justify-between">
+    <a href="/">
+      <img src="assets/images/github-logo-1.png" alt="logo" class="w-32 block" />
+    </a>
+  </nav>
+  <div>
+    <h2 class="md:text-4xl text-2xl text-center my-4">Welcome to GitHub Repos Search Engine</h2>
+    <p class="text-center md:text-xl text-gray-300">Enter a GitHub username to search for their repositories</p>
+    <form class="flex justify-center my-4">
+      <input type="text" placeholder="Enter GitHub Username" [(ngModel)]="githubUsername"
+        (keypress)="onKeyPressEvent($event)" required autocomplete autofocus name="githubUsername" id="githubUsername"
+        class="border border-gray-300 md:w-1/6 w-full md:mx-0 mx-3 rounded-lg p-2 text-black font-mono" />
+      <button type="submit" class="bg-blue-600 rounded-lg p-2 ml-2 flex" (click)="onSearchClick()">
+        <span class="material-symbols-outlined">search</span>
+        <p>Search</p>
+      </button>
+    </form>
+  </div>
+</div>
